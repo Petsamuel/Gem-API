@@ -38,7 +38,6 @@ Format your response as:
 
 Remember: Maximum snark, minimum mercy!"""
 
-        # Generate roast using OpenAI
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
@@ -49,7 +48,7 @@ Remember: Maximum snark, minimum mercy!"""
             temperature=0.8
         )
 
-        # Extract the roast from the response
+      
         roast = response.choices[0].message.content.strip()
         
         return {
